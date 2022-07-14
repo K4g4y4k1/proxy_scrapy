@@ -49,15 +49,24 @@ def proxy_scrapper(URL):
 def main():
     URL1 = ['HTTP_Proxy','https://free-proxy-list.net/']
     URL2 = ['Socks Proxy','https://www.socks-proxy.net/']
+    """
     choice = input("Please choose between:\n - HTTP proxy (1) \n - Socks proxy (2) \n")
     if choice == "1":
-        proxy_scrapper(URL1)
+        #db1 = proxy_scrapper(URL1)
         print("HTTP Proxies exported")
+        return proxy_scrapper(URL1)
     elif choice == "2": 
-        proxy_scrapper(URL2),
+        #db2 = proxy_scrapper(URL2),
         print("SOCKS Proxies exported")
+        return proxy_scrapper(URL2)
     else:
         print('Please choose 1 or 2')
+    """
+    proxy_scrapper(URL1)
+    print("HTTP Proxies exported")
+    proxy_scrapper(URL2)
+    print("SOCKS Proxies exported")
+    
         
 #Automatic Main function launcher        
 if __name__ == "__main__": main()
